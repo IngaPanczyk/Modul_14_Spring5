@@ -1,4 +1,4 @@
-package forum;
+package spring.forum;
 
 import org.springframework.stereotype.Component;
 
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class ForumUser {
     String username;
 
-    public ForumUser(String username) {
+    public ForumUser() {
         this.username = "John Smith";
     }
 
