@@ -1,17 +1,42 @@
 package spring.portfolio;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.ArrayList;
 
 @Configuration
 public class BoardConfig {
+    @Autowired
+    @Qualifier("L1")
+    TaskList toDoList;
 
-    Board board;
+    @Autowired
+    @Qualifier("L2")
+    TaskList inProgressList;
 
-    @Bean
-    public Board boardControler() {
-        return new Board(board.getToDoList(),board.getInProgressList(), board.getDoneList());
+    @Autowired
+    @Qualifier("L3")
+    TaskList doneList;
+
+    @Bean (name = "L1")
+    public TaskList createToDoList() {
+        return new TaskList();
     }
+
+    @Bean (name = "L2")
+    public TaskList createInProgressLIst() {
+        return new TaskList();
+    }
+
+    @Bean (name = "L3")
+    public TaskList createDoneList() {
+        return new TaskList();
+    }
+
+/*      @Bean (name = "board")
+    public Board createBoard() {
+        return new Board(toDoList, inProgressList, doneList);
+    }*/
 }
