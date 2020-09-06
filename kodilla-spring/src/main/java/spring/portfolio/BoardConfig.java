@@ -20,23 +20,23 @@ public class BoardConfig {
     @Qualifier("L3")
     TaskList doneList;
 
-    @Bean (name = "L1")
+    @Bean(name = "L1")
     public TaskList createToDoList() {
         return new TaskList();
     }
 
-    @Bean (name = "L2")
+    @Bean(name = "L2")
     public TaskList createInProgressLIst() {
         return new TaskList();
     }
 
-    @Bean (name = "L3")
+    @Bean(name = "L3")
     public TaskList createDoneList() {
         return new TaskList();
     }
 
-/*      @Bean (name = "board")
+    @Bean
     public Board createBoard() {
         return new Board(toDoList, inProgressList, doneList);
-    }*/
+    }
 }
