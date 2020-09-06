@@ -33,11 +33,11 @@ public class BoardTestSuite {
         //Given & When
         List toDoList = board.getToDoList().add("Task1");
         List inProgressList = board.getInProgressList().add("Task2");
-        List doneList = board.getDoneList().add("Task1");
+        List doneList = board.getDoneList().add("Task3");
 
         //Then
         System.out.println("ToDoList: " + toDoList);
-        System.out.println("DoneList: " + doneList);
         System.out.println("InProgressList: " + inProgressList);
+        System.out.println("DoneList: " + doneList);
     }
 }
